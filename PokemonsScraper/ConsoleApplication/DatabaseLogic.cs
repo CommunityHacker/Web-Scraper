@@ -24,13 +24,13 @@ namespace ConsoleApplication
             }
 
         }
-        public static void InsertPokemon()
+        public static void InsertPokemon(string name,bool legendary,string types )
         {
             var pokemon = new Pokemon
             {
-                Name = "Sarah",
-                Legendary = true,
-                SessionId = 1
+                Name = name,
+                Legendary = legendary,
+                TypeString = types
 
 
             };
@@ -73,9 +73,7 @@ namespace ConsoleApplication
         {
             using (var contex = new PokemonContext())
             {
-                /*
-                 *  var pokemons = contex.Pokemons.ToList();
-                 */
+                
 
                 var pokemons = contex.Pokemons.
                     Where(n => n.Name == "Eevee")

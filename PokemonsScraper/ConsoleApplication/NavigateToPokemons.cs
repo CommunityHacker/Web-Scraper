@@ -17,13 +17,7 @@ namespace ConsoleApplication
             SetSeleniumFunctions.EnterText(driver, "q", pokemonSearchString, "Name", true);
             SetSeleniumFunctions.Click(driver, xpath, "XPath");
 
-            //*[@id="rso"]/div/div/div[2]/div/div/h3/a
-
-            
-
-
            
-
             
         }
     }

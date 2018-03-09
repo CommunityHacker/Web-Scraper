@@ -57,6 +57,18 @@
     <Compile Include="Migrations\201803082244494_ListChange.Designer.cs">
       <DependentUpon>201803082244494_ListChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201803091904435_finaleeee.cs" />
+    <Compile Include="Migrations\201803091904435_finaleeee.Designer.cs">
+      <DependentUpon>201803091904435_finaleeee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091913553_finaleeee1.cs" />
+    <Compile Include="Migrations\201803091913553_finaleeee1.Designer.cs">
+      <DependentUpon>201803091913553_finaleeee1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201803091922425_NewOne.cs" />
+    <Compile Include="Migrations\201803091922425_NewOne.Designer.cs">
+      <DependentUpon>201803091922425_NewOne.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PokemonContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -76,6 +88,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201803082244494_ListChange.resx">
       <DependentUpon>201803082244494_ListChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091904435_finaleeee.resx">
+      <DependentUpon>201803091904435_finaleeee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091913553_finaleeee1.resx">
+      <DependentUpon>201803091913553_finaleeee1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201803091922425_NewOne.resx">
+      <DependentUpon>201803091922425_NewOne.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

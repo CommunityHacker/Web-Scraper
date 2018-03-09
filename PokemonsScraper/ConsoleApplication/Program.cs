@@ -2,6 +2,7 @@
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using Pokemons.DataModel;
+using System;
 using System.Collections.Generic;
 using System.Data.Entity;
 
@@ -12,14 +13,22 @@ namespace ConsoleApplication
         static void Main(string[] args)
         {
 
-              ChromeDriver driver = new ChromeDriver();
-            // Database.SetInitializer(new NullDatabaseInitializer<PokemonContext>());
-            //InsertSession();
-            //InsertPokemon();
-            //InsertMultiplePokemons();
-            //DatabaseLogic.SimplePokemonQueries();
+            ChromeDriver driver = new ChromeDriver();
+            Database.SetInitializer(new NullDatabaseInitializer<PokemonContext>());
+          
+
             NavigateToPokemons.PokemonNavigate(driver, "Pokemon List");
+            GetPokemonListAndSave(driver);
+
+
+        }
+        public static void GetPokemonListAndSave(IWebDriver driver)
+        {
+            
             GetSeleniumFunctions.GetPokemonList(driver);
+            
+
+
         }
 
        

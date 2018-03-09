@@ -18,6 +18,7 @@ namespace Pokemons.Classes
         public List <Session> Sessions { get; set; }
         public int SessionId { get; set; }
         public List<PokemonType> Type { get; set; }
+        public string TypeString { get; set; }
 
     }
 

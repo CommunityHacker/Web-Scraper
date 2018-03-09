@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
+using Pokemons.Classes;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace ConsoleApplication
     {
         public static string GetText(IWebDriver driver, string element, string elementType)
         {
-            //  string[] pokemons; ;
+           
             if (elementType == "Id")
             {
-                // pokemons = driver.FindElements(By.Id(element)).ToString;
+                
                 return driver.FindElement(By.Id(element)).Text;
             }
             else if (elementType == "Class")
@@ -44,43 +45,34 @@ namespace ConsoleApplication
 
         }
 
-        public static void GetPokemonList(IWebDriver driver)
+        public static void GetPokemonList(IWebDriver driver )
         {
             
-          //  var pokemonTypes = new List<string[]>();
+          
             var pokemonTypes = new List<IWebElement>();
-            var currListOfTitles = new List<string>();
-           // string[] currListOfTitles = new string[];
+            var   pokemons = new List<string>();
+        
+           
 
             var pokemonPanel = driver.FindElements(By.ClassName("infocard-tall"));
             foreach (var panel in pokemonPanel)
             {
                 var title = panel.FindElement(By.ClassName("ent-name"));
-                Console.WriteLine("Pokemon: " + title.Text);
-
-
+               
+                pokemons.Add(title.Text);
                 pokemonTypes.Add(title);
                 var types = panel.FindElements(By.ClassName("aside"));
 
 
                 foreach (var type in types)
                 {
-                    Console.WriteLine("Types: " + type.Text);
-                    currListOfTitles.Add(type.Text);
+                   
+                    string typesString = type.Text;
+                   
+                    DatabaseLogic.InsertPokemon(pokemons.Last(), false, type.Text);
+                  
                 }
-
-                /*
-                    for (int i = 0; i < types.Count; i++)
-                {
-                    Console.WriteLine("Types: " + types[i].Text);
-                    currListOfTitles.Add(types[i].Text);
-                    
-                }
-                    */
-            }
-
-
-           // return pokemonTypes;
+            }       
         }
     }
 }
