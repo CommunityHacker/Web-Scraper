@@ -8,5 +8,5 @@ Using:
 Entity Framework - database (code first)
 
 
-Selenium - navigate to html page ,scrape data
+Selenium - navigate  ,scrape data
 
